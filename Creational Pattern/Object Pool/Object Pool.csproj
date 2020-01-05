@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <RootNamespace>Object_Pool</RootNamespace>
+    <ApplicationIcon />
+    <Win32Resource />
+    <Authors>Jay Shah</Authors>
+  </PropertyGroup>
+
+</Project>
