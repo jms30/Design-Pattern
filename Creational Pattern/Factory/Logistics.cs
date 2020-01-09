@@ -19,7 +19,6 @@ namespace Factory
 
         #region Abstract Methods to be implemented by subclasses
         public abstract TransportVehicle GetFreeVehicle();
-        public abstract bool DeliverGoods( string[] goods, TransportVehicle vehicle );
         #endregion
     }
 }

@@ -20,15 +20,6 @@ namespace Factory
             m_Vehicles.Add( newTruck );
             return newTruck;
         }
-
-        public override bool DeliverGoods( string[] goods, TransportVehicle truck )
-        {
-            if ( !m_Vehicles.Contains( truck ) )
-                return false;
-
-            truck.DeliverGoods( goods );
-            return true;
-        }
         #endregion
 
     }

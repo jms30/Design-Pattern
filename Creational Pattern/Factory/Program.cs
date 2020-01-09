@@ -28,8 +28,8 @@ namespace Factory
                         return;
                 }
 
-                string[] goods1 = new string[] { "Food", "Drinks", "Snacks" };
-                string[] goods2 = new string[] { "Computers", "Laptopds", "Phones" };
+                string[] goods1 = new string[] { "Food", "Drinks", "Clothes" };
+                string[] goods2 = new string[] { "Computers", "Laptods", "Phones" };
 
                 // create vehicle
                 TransportVehicle vehicleToUse1 = logistics.GetFreeVehicle();
@@ -38,10 +38,9 @@ namespace Factory
                 vehicleToUse2.DestinationPoint = "San Francisco";
 
                 // deliver goods
-                logistics.DeliverGoods( goods1 ,vehicleToUse1 );
-                logistics.DeliverGoods( goods2, vehicleToUse2 );
+                vehicleToUse1.DeliverGoods( goods1 );
+                vehicleToUse2.DeliverGoods( goods2 );
             }
-            
         }
     }
 }
