@@ -3,7 +3,12 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace Factory
-{
+{    
+    /// <summary>
+    /// A concrete subclass that defines what a Sea Logistics mode would look like.
+    /// It shows what is used to deliver goods in this mode. So, it tells what type 
+    /// of product (<see cref="Ship"/>) it will be responsible for.
+    /// </summary>
     public class SeaLogistics : Logistics
     {
         #region Constructor

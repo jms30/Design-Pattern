@@ -2,6 +2,10 @@
 
 namespace Factory
 {
+    /// <summary>
+    /// A concrete-product class that defines a vehicle used
+    /// in a Sea Logistics to deliver goods to ports. 
+    /// </summary>
     public class Ship : TransportVehicle
     {
         #region Class Members

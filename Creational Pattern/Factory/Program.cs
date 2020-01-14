@@ -10,8 +10,8 @@ namespace Factory
             while ( true )
             {
                 Console.WriteLine( "Press 1 for Road transport" );
-                Console.WriteLine( "Press 2 for Sea transport");
-                Console.WriteLine( "Press anything else to leave.");
+                Console.WriteLine( "Press 2 for Sea transport" );
+                Console.WriteLine( "Press anything else to leave." );
                 
                 Logistics logistics = null;
                 string choice = Console.ReadLine();

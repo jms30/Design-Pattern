@@ -1,5 +1,9 @@
 ﻿namespace Factory
 {
+    /// <summary>
+    /// Defines functionalities of a Transportation vehicle used to deliver
+    /// goods to the customers.
+    /// </summary>
     public interface TransportVehicle
     {
         public void DeliverGoods( string[] goods );

@@ -4,6 +4,11 @@ using System.Text;
 
 namespace Factory
 {
+    /// <summary>
+    /// A concrete subclass that defines what a Road Logistics mode would look like.
+    /// It shows what is used to deliver goods in this mode. So, it tells what type 
+    /// of product (<see cref="Truck"/>) it will be responsible for.
+    /// </summary>
     public class RoadLogistics : Logistics
     {
         #region Constructor

@@ -2,6 +2,10 @@
 
 namespace Factory
 {
+    /// <summary>
+    /// A concrete-product class that defines a vehicle used
+    /// in a Road Logistics to deliver goods to cities.
+    /// </summary>
     public class Truck : TransportVehicle
     {
         #region Class Members
@@ -9,7 +13,7 @@ namespace Factory
         #endregion
 
         #region Constructor
-        public Truck( string truckId)
+        public Truck( string truckId )
         {
             m_TruckId = truckId;
         }

@@ -4,6 +4,9 @@ using System.Text;
 
 namespace Factory
 {
+    /// <summary>
+    /// Defines common functionality related to Logistics. 
+    /// </summary>
     public abstract class Logistics
     {
         #region Constants and Members
