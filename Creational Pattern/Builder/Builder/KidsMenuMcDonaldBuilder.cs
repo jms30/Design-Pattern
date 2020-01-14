@@ -4,6 +4,9 @@ using System.Text;
 
 namespace Builder
 {
+    /// <summary>
+    /// An Implementer of a Kids Menu at McDonalds.
+    /// </summary>
     public class KidsMenuMcDonaldBuilder : MealBuilder
     {
         private KidsPlateMcDonald m_Plate = new KidsPlateMcDonald();
@@ -38,36 +41,6 @@ namespace Builder
         {
             return m_Plate;
         }
-        #endregion
-    }
-
-    public class KidsPlateMcDonald
-    {
-
-        #region Properties
-        public string Donut
-        {
-            get;
-            set;
-        } = "";
-
-        public string SoftDrink
-        {
-            get;
-            set;
-        } = "";
-
-        public string Fries
-        {
-            get;
-            set;
-        } = "";
-
-        public string Toy
-        {
-            get;
-            set;
-        } = "";
         #endregion
     }
 }

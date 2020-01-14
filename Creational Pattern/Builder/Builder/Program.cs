@@ -24,11 +24,11 @@ namespace Builder
             manager.SetBuilder( burgerkingBuilder );
             manager.BuildPlate();
             var kidsPlate2 = burgerkingBuilder.GetPreparedPlate();
-            Console.WriteLine("\nBurgerKing Kids Plate contains... ");
-            Console.WriteLine( "\t" + kidsPlate2.Burger + " Burger");
-            Console.WriteLine( "\t" + kidsPlate2.Drinks + " Drink");
-            Console.WriteLine( "\t" + kidsPlate2.Sundae + " Sundae");
-            Console.WriteLine( "\t" + kidsPlate2.Tickets + " Tickets");
+            Console.WriteLine( "\nBurgerKing Kids Plate contains... " );
+            Console.WriteLine( "\t" + kidsPlate2.Burger + " Burger" );
+            Console.WriteLine( "\t" + kidsPlate2.Drinks + " Drink" );
+            Console.WriteLine( "\t" + kidsPlate2.Sundae + " Sundae" );
+            Console.WriteLine( "\t" + kidsPlate2.Tickets + " Tickets" );
 
             burgerkingBuilder.Reset();
         }

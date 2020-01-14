@@ -4,9 +4,13 @@ using System.Text;
 
 namespace Builder
 {
+    /// <summary>
+    /// Interface that defines function to prepare Kids Menu at
+    /// any given restaurants.
+    /// </summary>
     public class MealBuilder
     {
-        public virtual void PrepareBurgrer() { }
+        public virtual void PrepareBurger() { }
 
         public virtual void PrepareDrinks() { }
 
