@@ -29,15 +29,17 @@ namespace Adapter
 
             bool isEqual = true;
             for ( int i = 0; i < adaptedSignalData.Length; ++i )
+            {
                 if ( adaptedSignalData[i] != equivalentDigitalSignalData[i] )
                 {
                     isEqual = false;
                     break;
                 }
+            }
             if ( isEqual == true )
-                Console.WriteLine("\nConversion successful.");
+                Console.WriteLine( "\nConversion successful." );
             else
-                Console.WriteLine("\nConversion failed.");
+                Console.WriteLine( "\nConversion failed." );
         }
     }
 }

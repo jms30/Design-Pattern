@@ -36,7 +36,6 @@ namespace Adapter
 
         public void SetAnalogSignalData( double[] analogdata )
         {
-
             InvalidateCache();
             this.m_AnalogSignal.SetAnalogSignalData( analogdata );
         }
