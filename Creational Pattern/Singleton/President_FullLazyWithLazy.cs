@@ -4,6 +4,11 @@ using System.Text;
 
 namespace Singleton
 {
+    /// <summary>
+    /// A complete Lazy way of realizing the Singleton pattern using <see cref="Lazy{T}"/> class.
+    /// This is the cleanest and simplest way of realizing the pattern which is good performing, 
+    /// as well as thread-safe.
+    /// </summary>
     public sealed class President_FullLazyWithLazy
     {
 

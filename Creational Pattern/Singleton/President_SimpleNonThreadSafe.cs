@@ -4,6 +4,10 @@ using System.Text;
 
 namespace Singleton
 {
+    /// <summary>
+    /// A very basic implementation of Singleton Pattern. 
+    /// This is a non-thread-safe way of instantiating the class object.
+    /// </summary>
     public sealed class President_SimpleNonThreadSafe
     {
         #region Class members
