@@ -4,6 +4,10 @@ using System.Text;
 
 namespace Adapter
 {
+    /// <summary>
+    /// The Adapter class that is used to make two different interface implementors talk with each other.
+    /// It provides conversion capabilities of type <see cref="Analog"/> to <see cref="Digital"/>.
+    /// </summary>
     public class AnalogToDigitalAdapter : Digital
     {
         private double m_Threshold = 1.0;
@@ -15,9 +19,13 @@ namespace Adapter
             m_Threshold = threshold;
         }
 
-        public void SetAnalogSignal( AnalogSignal digitalSignal )
+        /// <summary>
+        /// Serves as input function for <see cref="AnalogSignal"/> type that is to be converted to <see cref="DigitalSignal"/>.
+        /// </summary>
+        /// <param name="analogSignalToConvertToDigital">The analog signal to convert</param>
+        public void SetAnalogSignal( AnalogSignal analogSignalToConvertToDigital )
         {
-            m_AnalogSignal = digitalSignal;
+            m_AnalogSignal = analogSignalToConvertToDigital;
         }
 
         public override byte[] GetDigitalSignalData()
