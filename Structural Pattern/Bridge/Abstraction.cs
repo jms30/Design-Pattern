@@ -4,6 +4,17 @@ using System.Text;
 
 namespace Bridge
 {
+    /// <summary>
+    /// An interface for Abstraction. The implementors of this interface are the classes 
+    /// that serve as Abstraction to the client program (not to confuse with 'abstract' 
+    /// keyword in OOP).
+    /// 
+    /// An abstraction classes are those classes that serve as first point for clients and
+    /// allow them to interact with underlying implementor classes. They carry out the actual 
+    /// client actions on the implementor classes. This allows the abstraction classes to vary 
+    /// by functionality independently from each other. 
+    /// 
+    /// </summary>
     public interface IRemote
     {
         void ToggleDevice();
@@ -17,81 +28,5 @@ namespace Bridge
         void DescreseChannel();
 
         void SetImplementation( IImplementation concreteImplementer );
-    }
-
-    public class BasicRemote : IRemote
-    {
-        private IImplementation m_Implementer = null;
-
-        protected IImplementation GetImplementation()
-        {
-            return m_Implementer;
-        }
-
-        public void SetImplementation( IImplementation concreteImplementer )
-        {
-            m_Implementer = concreteImplementer;
-        }
-
-        public void ToggleDevice()
-        {
-            if ( m_Implementer != null )
-            {
-                if ( m_Implementer.IsEnabled() )
-                    m_Implementer.Disable();
-                else
-                    m_Implementer.Enable();
-            }
-        }
-
-        public void DecreaseVolume()
-        {
-            if ( m_Implementer != null )
-            {
-                m_Implementer.SetVolume( m_Implementer.GetVolume() - 10 );
-            }
-        }
-
-        public void DescreseChannel()
-        {
-            if ( m_Implementer != null )
-            {
-                m_Implementer.SetChannel( m_Implementer.GetChannel() - 1 );
-            }
-        }
-
-        public void IncreaseChannel()
-        {
-            if ( m_Implementer != null )
-            {
-                m_Implementer.SetChannel( m_Implementer.GetChannel() + 1 );
-            }
-        }
-
-        public void IncreaseVolume()
-        {
-            if (m_Implementer != null)
-            {
-                m_Implementer.SetVolume( m_Implementer.GetVolume() + 10 );
-            }
-        }
-
-    }
-
-    public class AdvancedRemote : BasicRemote
-    {
-        public void MuteDevice()
-        {
-            var concreteImplementor = GetImplementation();
-            if ( concreteImplementor != null )
-                concreteImplementor.SetVolume( 0 );
-        }
-
-        public void JumpToSpecificChannel( int channelNumberToJumpTo )
-        {
-            var concreteImplementor = GetImplementation();
-            if ( concreteImplementor != null )
-                concreteImplementor.SetChannel( channelNumberToJumpTo );
-        }
     }
 }

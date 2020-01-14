@@ -7,7 +7,6 @@ namespace Bridge
     {
         static void Main(string[] args)
         {
-            TVImplementor tv = new TVImplementor();
             Dictionary<int, string> tvChannels = new Dictionary<int, string>() {
                                                         { 1, "HBO" },
                                                         { 2, "Disney" },
@@ -22,11 +21,11 @@ namespace Bridge
                                                         { 4, "Toronto's Hip-Hop" },
                                                         { 5, "CHFI 98.1" } };
 
+            TV tv = new TV();
             AdvancedRemote advanceRemote = new AdvancedRemote();
-
             advanceRemote.SetImplementation( tv );
-
             Console.WriteLine( "An Advanced remote is set to control the TV. " );
+
             Console.WriteLine( "\tSetting a channel to 1" );
             advanceRemote.IncreaseChannel();
             Console.WriteLine( "\t The TV is broadcasting : " + tvChannels[tv.GetChannel()] );
@@ -64,9 +63,8 @@ namespace Bridge
             Console.WriteLine( "\tTV is switched off??: " + !tv.IsEnabled() );
 
 
-
+            Radio radio = new Radio();
             BasicRemote basicRemote = new BasicRemote();
-            RadioImplementor radio = new RadioImplementor();
             basicRemote.SetImplementation( radio );
             Console.WriteLine( "A Basic remote is set to control Radio. ");
 
