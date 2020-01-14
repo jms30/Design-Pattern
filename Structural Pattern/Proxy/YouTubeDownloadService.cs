@@ -5,6 +5,10 @@ using System.Text;
 
 namespace Proxy
 {
+    /// <summary>
+    /// The real-fat object that will do the heavy lifting of talking
+    /// with the YouTube server.
+    /// </summary>
     public class YouTubeDownloadService : IDownloadService
     {
         private Dictionary<int, string> m_VideoData = new Dictionary<int, string>();

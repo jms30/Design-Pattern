@@ -4,6 +4,13 @@ using System.Text;
 
 namespace Proxy
 {
+    /// <summary>
+    /// A proxy service that caches the already fetched data 
+    /// to avoid invoking fat-object <see cref="YouTubeDownloadService"/>.
+    /// Although, when the data is not present here, it will invoke
+    /// the <see cref="YouTubeDownloadService"/>  to talk to the YouTube server
+    /// and caches the newly-available data to server faster to the clients.
+    /// </summary>
     public class CachedYouTubeDownloadService : IDownloadService
     {
         private Dictionary<int, string> m_CachedVideos = new Dictionary<int, string>();
@@ -16,9 +23,9 @@ namespace Proxy
 
         public string DownloadVideo( int id )
         {
-            if (m_CachedVideos.ContainsKey(id))
+            if ( m_CachedVideos.ContainsKey( id ) )
             {
-                Console.WriteLine( string.Format("\t{0} is already downloaded. Returning from the cache immediately.", m_CachedVideos[id] ) );
+                Console.WriteLine( string.Format( "\t{0} is already downloaded. Returning from the cache immediately.", m_CachedVideos[id] ) );
                 return m_CachedVideos[id];
             }
             
