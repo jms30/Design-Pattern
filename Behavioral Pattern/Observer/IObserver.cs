@@ -11,8 +11,8 @@ namespace Observer
     {
         void Update( string stockSymbol );
 
-        void AddStock( IStock stockSymbol );
+        void AddStock( IStock stock );
 
-        void RemoveStock( IStock stockSymbol );
+        void RemoveStock( IStock stock );
     }
 }

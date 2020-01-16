@@ -10,31 +10,31 @@ namespace Observer
     /// </summary>
     public class FidelityObserver : IObserver
     {
-        private Dictionary<string, IStock> m_StocksToPrice;
+        private Dictionary<string, IStock> m_StocksToWatch;
 
         public FidelityObserver()
         {
-            m_StocksToPrice = new Dictionary<string, IStock>();
+            m_StocksToWatch = new Dictionary<string, IStock>();
         }
 
         #region IObserver Implementation
-        public void AddStock( IStock stockSymbol )
+        public void AddStock( IStock stock )
         {
-            stockSymbol.AddObserver( this );
-            m_StocksToPrice[stockSymbol.Symbol] = stockSymbol;
+            stock.AddObserver( this );
+            m_StocksToWatch[stock.Symbol] = stock;
         }
 
-        public void RemoveStock( IStock stockSymbol )
+        public void RemoveStock( IStock stock )
         {
-            m_StocksToPrice.Remove( stockSymbol.Symbol );
-            stockSymbol.RemoveObserver( this );
+            m_StocksToWatch.Remove( stock.Symbol );
+            stock.RemoveObserver( this );
         }
 
         public void Update( string stockSymbol )
         {
-            if ( m_StocksToPrice.ContainsKey( stockSymbol ) )
+            if ( m_StocksToWatch.ContainsKey( stockSymbol ) )
             {
-                Console.WriteLine( "\tFidelity Observer=> Stock: " + stockSymbol + " is trading at : " + m_StocksToPrice[stockSymbol].Price );
+                Console.WriteLine( "\tFidelity Observer=> Stock: " + stockSymbol + " is trading at : " + m_StocksToWatch[stockSymbol].Price );
             }
         }
         #endregion
